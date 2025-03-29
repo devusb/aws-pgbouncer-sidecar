@@ -57,7 +57,10 @@
           };
 
           packages = {
-            aws-pgbouncer = pkgs.callPackage ./aws-pgbouncer.nix { };
+            aws-pgbouncer = pkgs.callPackage ./script.nix { };
+            aws-pgbouncer-sidecar = pkgs.callPackage ./container.nix {
+              inherit (self'.packages) aws-pgbouncer;
+            };
           };
 
           devenv.shells.default = {
@@ -79,8 +82,5 @@
           };
 
         };
-      flake = {
-
-      };
     };
 }

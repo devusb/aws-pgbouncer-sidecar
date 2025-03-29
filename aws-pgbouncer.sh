@@ -1,5 +1,3 @@
-#!/bin/env bash
-
 AWS_REGION=${AWS_REGION:-"us-east-1"}
 DB_NAME=${DB_NAME:-"postgres"}
 DB_HOST=${DB_HOST:-"localhost"}
