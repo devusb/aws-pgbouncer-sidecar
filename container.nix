@@ -1,7 +1,6 @@
 {
   lib,
   dockerTools,
-  fakeNss,
   aws-pgbouncer,
   postgresql,
 }:
@@ -10,7 +9,8 @@ dockerTools.buildLayeredImage {
   tag = "latest";
 
   contents = [
-    fakeNss
+    dockerTools.binSh
+    dockerTools.fakeNss
     aws-pgbouncer
     postgresql # for health check
   ];
