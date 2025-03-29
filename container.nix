@@ -3,6 +3,7 @@
   dockerTools,
   fakeNss,
   aws-pgbouncer,
+  postgresql,
 }:
 dockerTools.buildLayeredImage {
   name = "ghcr.io/devusb/aws-pgbouncer";
@@ -11,6 +12,7 @@ dockerTools.buildLayeredImage {
   contents = [
     fakeNss
     aws-pgbouncer
+    postgresql # for health check
   ];
 
   config = {
