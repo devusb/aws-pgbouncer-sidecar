@@ -19,6 +19,7 @@ dockerTools.buildLayeredImage {
   };
 
   extraCommands = ''
+    chmod -R 777 var/empty
     mkdir -p tmp
     chmod 777 tmp
     mkdir -p etc
