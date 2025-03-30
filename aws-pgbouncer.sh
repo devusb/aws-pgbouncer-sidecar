@@ -31,6 +31,7 @@ default_pool_size = 20
 server_tls_sslmode = require
 min_pool_size = 0
 reserve_pool_size = 0
+server_lifetime = 604800
 # some Java libraries set this extra_float_digits implicitly: https://github.com/Athou/commafeed/issues/559
 ignore_startup_parameters = extra_float_digits
 EOF
